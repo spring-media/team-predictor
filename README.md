@@ -28,12 +28,6 @@ npm run build
 npm run build --report
 ```
 
-### Testing
+## License
 
-```bash
-# Run unit tests
-npm run unit
-
-# Run all tests
-npm test
-```
+MIT
