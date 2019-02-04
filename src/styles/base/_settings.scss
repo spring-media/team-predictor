@@ -1,0 +1,160 @@
+/* COLORS */
+$welt: #003a5a;
+$welt--90: lighten($welt, 10%);
+$welt--80: lighten($welt, 20%);
+$welt--70: lighten($welt, 30%);
+$welt--60: lighten($welt, 40%);
+$welt--50: lighten($welt, 50%);
+$welt--40: lighten($welt, 60%);
+$welt--30: lighten($welt, 70%);
+$welt--20: lighten($welt, 80%);
+$welt--10: lighten($welt, 90%);
+
+$weltorange: #f18825;
+$weltorange--90: lighten($weltorange, 10%);
+$weltorange--80: lighten($weltorange, 20%);
+$weltorange--70: lighten($weltorange, 30%);
+$weltorange--60: lighten($weltorange, 40%);
+$weltorange--50: lighten($weltorange, 50%);
+$weltorange--40: lighten($weltorange, 60%);
+$weltorange--30: lighten($weltorange, 70%);
+$weltorange--20: lighten($weltorange, 80%);
+$weltorange--10: lighten($weltorange, 90%);
+
+$blarz: #171b2d;
+$text: #1d1d1d;
+$greige: #edece8;
+$dunkelgrau: #787878;
+$anthrazit: #383e42;
+
+$success: #6e9454;
+$danger: #b71336;
+$warning: #d2ac19;
+
+/* SIZES: */
+$navbar-height: 50px;
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-ExtraLight.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-ExtraLightItalic.otf);
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-LightItalic.otf);
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Italic.otf);
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Book.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-BookItalic.otf);
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Medium.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-MediumItalic.otf);
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-BoldItalic.otf);
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Heavy.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-HeavyItalic.otf);
+  font-style: italic;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Mark OT';
+  src: url(https://static.apps.welt.de/fonts/markot/MarkOT-Ultra.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'FreightText Pro';
+  src: url(https://static.apps.welt.de/fonts/freig/FreigTexProBoo.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'FreightText Pro';
+  src: url(https://static.apps.welt.de/fonts/freig/FreigTexProBold.otf);
+  font-weight: 800;
+}
+
+/* bold italic */
+@font-face {
+  font-family: 'FreightText Pro';
+  src: url(https://static.apps.welt.de/fonts/freig/FreigTexProBlkIt.otf);
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* book italic */
+@font-face {
+  font-family: 'FreightText Pro';
+  src: url(https://static.apps.welt.de/fonts/freig/FreigTexProBlkIt.otf);
+  font-style: italic;
+  font-weight: 500;
+}

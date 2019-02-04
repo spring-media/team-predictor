@@ -1,0 +1,534 @@
+{
+  "tag": "wm_kader",
+  "startDate": "2016-10-14T00:00:00",
+  "endDate": "2016-11-10T23:59:59",
+  "settings": {
+    "projectPath":
+      "https://static.apps.welt.de/sport/interaktiv/weltmeisterschaft-2018",
+    "fileName": "wm-kader",
+    "images": "/assets/images/",
+    "icons": "/assets/icons/",
+    "spieler": "/assets/images/spieler/",
+    "editorsChoices":
+      "&name=S3Vja3Vjaw==&choices=MDAwMSwwMDAwLDAwMDMsMDEwMSwwMTAwLDAxMDMsMDEwMiwwMTA2LDAxMDcsMDEwNCwwMTA1LDAyMDEsMDIwMCwwMjAyLDAyMDMsMDIwNSwwMjA0LDAyMDYsMDIwNywwMjA5LDAzMDEsMDMwMCwwMzAz"
+  },
+  "sharing": {
+    "sharingText":
+      "Das ist meine Aufstellung für das Spiel gegen Mexiko. Stelle jetzt deine eigene Wunsch-Elf zusammen und erfahre, welche Chancen sie hat. #WM2018 #GERMEX",
+    "sharingTextIntro": "Das ist meine Aufstellung für das Spiel gegen Mexiko.",
+    "sharingTextOutro":
+      "Stelle jetzt deine eigene Wunschmannschaft zusammen und erfahre, welche Chancen dein Team hat. #WM2018",
+    "sharingsub": "Aufstellung bei WELT",
+    "sharingTitle": "Aufstellung von"
+  },
+  "navigation": {
+    "buttons": {
+      "createOwn": "ERSTELLEN SIE IHRE EIGENE Aufstellung",
+      "backToOwn": "ZURÜCK ZUR EIGENEN Aufstellung",
+      "own": "Ihre Aufstellung",
+      "other": "Aufstellung von ",
+      "new": "Aufstellung neu erstellen",
+      "createFinalOwn": "FINALE Aufstellung ERSTELLEN",
+      "comparison": "Aufstellung der Sportredaktion"
+    }
+  },
+  "introSection": {
+    "title": "Ihre Wunsch-Elf für das Spiel gegen Mexiko",
+    "subtitle":
+      "Nominieren Sie hier Ihr Team und teilen Sie es mit Ihren Freunden.",
+    "header": "/assets/images/header/titelbild-min.jpg",
+    "headerMobile": "/assets/images/header/titelbild_mobile_2x.jpg",
+    "headerLogo": "/assets/images/header/signet.png"
+  },
+  "mainSection": {
+    "resultTitle": "Ihre Aufstellung",
+    "resultSub": "Teilen Sie Ihre Aufstellung",
+    "sharedTitle": "Aufstellung von ",
+    "sharedSub": "Meine 11 Spieler gegen Mexiko",
+    "majorityTitle": "Aufstellung der WELT-Leser",
+    "majoritySub": "",
+    "editorTitle": "Aufstellung der Sportredaktion",
+    "editorSub": "",
+    "lineup": [[3, 5, 2], [4, 5, 1], [4, 4, 2], [3, 4, 2]],
+    "comparison": {
+      "comparisonTitle":
+        "Der Kader im Vergleich zum vorläufigen WM-Kader von Jogi Löw",
+      "comparisonSub": "",
+      "mainComparison":
+        "die auch der Bundestrainer in den vorläufigen Kader aufgenommen hat. Bei ",
+      "itemComparison": "Spieler"
+    },
+    "evaluation": {
+      "introResult": "Ihre Aufstellung besteht aus",
+      "introShared": "s Aufstellung besteht aus",
+      "introMajority": "Die Aufstellung der Weltleser besteht aus",
+      "success": "sicher gesetzten Spielern",
+      "warning": "mit guten Chancen",
+      "danger": "Wackelkandidaten",
+      "advice": "Klicken Sie auf die Spieler, um zu erfahren warum!"
+    },
+    "sections": [
+      {
+        "name": "Tor",
+        "counterText": " Spieler aus",
+        "content": [
+          {
+            "id": "0000",
+            "name": "Manuel Neuer",
+            "sub": "FC Bayern",
+            "img": "02_neuer.jpg",
+            "desc":
+              "Neuer hat nach seinem Mittelfußbruch wieder Spielpraxis bekommen, ist als Nummer eins gesetzt",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0001",
+            "name": "Marc-Andre ter Stegen",
+            "sub": "FC Barcelona",
+            "img": "03_stegen.jpg",
+            "desc":
+              "Löw hat sich auf Neuer festgelegt, ihm bleibt nur die Bank",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0002",
+            "name": "Bernd Leno",
+            "sub": "Bayer Leverkusen",
+            "img": "04_leno.jpg",
+            "desc": "Er duelliert sich mit Trapp um einen Reservistenplatz",
+            "status": "warning",
+            "choosen": false
+          },
+          {
+            "id": "0003",
+            "name": "Kevin Trapp",
+            "sub": "Paris St. Germain",
+            "img": "05_trapp.jpg",
+            "desc": "Die klare Nummer drei",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0004",
+            "name": "Ralf Fährmann",
+            "sub": "Schalke 04",
+            "img": "06_faehrmann.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0005",
+            "name": "Sven Ulreich",
+            "sub": "FC Bayern",
+            "img": "07_ulreich.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          }
+        ],
+        "maxChoices": 1
+      },
+      {
+        "name": "Abwehr",
+        "counterText": " Spieler aus",
+        "content": [
+          {
+            "id": "0100",
+            "name": "Jerome Boateng",
+            "sub": "FC Bayern",
+            "img": "10_boateng.jpg",
+            "desc": "Als Abwehrchef fest eingeplant",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0101",
+            "name": "Mats Hummels",
+            "sub": "FC Bayern",
+            "img": "11_hummels.jpg",
+            "desc": "Neben Boateng in der Innenverteidigung gesetzt",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0102",
+            "name": "Shkodran Mustafi",
+            "sub": "FC Arsenal",
+            "img": "12_mustafi.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0103",
+            "name": "Marvin Plattenhardt",
+            "sub": "Hertha BSC",
+            "img": "13_plattenhardt.jpg",
+            "desc": "Ist der Ersatz für Hector auf der linken Außenbahn",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0104",
+            "name": "Antonio Rüdiger",
+            "sub": "FC Chelsea",
+            "img": "14_ruediger.jpg",
+            "desc": "Ersatz für Hummels und Boateng",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0105",
+            "name": "Joshua Kimmich",
+            "sub": "FC Bayern",
+            "img": "15_kimmich.jpg",
+            "desc": "Löws gesetzter Mann für die rechte Außenbahn",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0106",
+            "name": "Jonas Hector",
+            "sub": "1. FC Köln",
+            "img": "16_hector.jpg",
+            "desc": "Mangels Alternativen auf links gesetzt",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0107",
+            "name": "Jonathan Tah",
+            "sub": "Bayer Leverkusen",
+            "img": "17_tah.jpg",
+            "desc":
+              "Trotz Confed-Cup-Teilnahme ist seine vorläufige Nominierung eine Überraschung",
+            "status": "danger",
+            "choosen": false
+          },
+          {
+            "id": "0108",
+            "name": "Matthias Ginter",
+            "sub": "Borussia M'gladbach",
+            "img": "18_ginter.jpg",
+            "desc": "Seine Vielseitigkeit in der Defensive ist Ginters Plus",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0109",
+            "name": "Benedikt Höwedes",
+            "sub": "Juventus Turin",
+            "img": "19_hoewedes.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0110",
+            "name": "Niklas Süle",
+            "sub": "FC Bayern",
+            "img": "20_suele.jpg",
+            "desc":
+              "Eine echte \"Kante\", die Löw im Eifer des Gefechts gut gebrauchen kann",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0111",
+            "name": "Benjamin Henrichs",
+            "sub": "Bayer Leverkusen",
+            "img": "21_henrichs.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0112",
+            "name": "Philipp Max",
+            "sub": "FC Augsburg",
+            "img": "22_max.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0113",
+            "name": "Sven Bender",
+            "sub": "Bayer Leverkusen",
+            "img": "23_bender.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0114",
+            "name": "Lars Bender",
+            "sub": "Bayer Leverkusen",
+            "img": "24_bender.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0115",
+            "name": "Marcel Schmelzer",
+            "sub": "Borussia Dortmund",
+            "img": "25_schmelzer.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          }
+        ],
+        "maxChoices": 4
+      },
+      {
+        "name": "Mittelfeld",
+        "counterText": " Spieler aus",
+        "content": [
+          {
+            "id": "0200",
+            "name": "Mesut Özil",
+            "sub": "FC Arsenal",
+            "img": "28_oezil.jpg",
+            "desc": "Stammkraft im offensiven Mittelfeld - als Spielmacher?",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0201",
+            "name": "Thomas Müller",
+            "sub": "FC Bayern",
+            "img": "29_mueller.jpg",
+            "desc": "Ohne Müller geht nichts im deutschen Team",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0202",
+            "name": "Marco Reus",
+            "sub": "Borussia Dortmund",
+            "img": "30_reus.jpg",
+            "desc": "Hoffentlich bleibt er diesmal gesund",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0203",
+            "name": "Leroy Sane",
+            "sub": "Manchester City",
+            "img": "31_sane.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0204",
+            "name": "Mario Götze",
+            "sub": "Borussia Dortmund",
+            "img": "32_goetze.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0205",
+            "name": "Julian Draxler",
+            "sub": "Paris St. Germain",
+            "img": "33_draxler.jpg",
+            "desc":
+              "Fraglich ist nur, ob der Paris-Profi sich einen Stammplatz bei Löw sichern kann",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0206",
+            "name": "Toni Kroos",
+            "sub": "Real Madrid",
+            "img": "34_kroos.jpg",
+            "desc":
+              "Ob als Sechser oder Spielmacher - eine der ganz zentralen Figuren im deutschen Spiel",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0207",
+            "name": "Emre Can",
+            "sub": "FC Liverpool",
+            "img": "35_can.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0208",
+            "name": "Sami Khedira",
+            "sub": "Juventus Turin",
+            "img": "36_khedira.jpg",
+            "desc":
+              "Auf jeden Fall dabei - muss allerdings um seinen Stammplatz kämpfen",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0209",
+            "name": "Kerem Demirbay",
+            "sub": "TSG Hoffenheim",
+            "img": "37_demirbay.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0210",
+            "name": "Leon Goretzka ",
+            "sub": "Schalke 04",
+            "img": "38_gotetzka.jpg",
+            "desc": "Vielleicht der kommende deutsche Mittelfeld-Star",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0211",
+            "name": "Ilkay Gündogan ",
+            "sub": "Manchester City",
+            "img": "39_guendogan.jpg",
+            "desc": "Wie verkraftet er die Pfiffe gegen sich?",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0212",
+            "name": "Sebastian Rudy",
+            "sub": "FC Bayern",
+            "img": "40_rudy.jpg",
+            "desc":
+              "Löw schätzt seine ruhige Art, hat aber schon reichlich Sechser im Angebot",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0213",
+            "name": "Max Meyer",
+            "sub": "Schalke 04",
+            "img": "41_meyer.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0214",
+            "name": "Lars Stindl",
+            "sub": "Borussia M'gladbach",
+            "img": "42-stindl.jpg",
+            "desc": "Fällt für die WM verletzungsbedingt aus.",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0215",
+            "name": "Andre Schürrle",
+            "sub": "Borussia Dortmund",
+            "img": "43_schuerrle.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0216",
+            "name": "Julian Weigl",
+            "sub": "Borussia Dortmund",
+            "img": "54_weigl.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0217",
+            "name": "Julian Brandt",
+            "sub": "Bayer Leverkusen",
+            "img": "48_brandt.jpg",
+            "desc":
+              "Trotz zuletzt ansteigender Formkurve wohl (noch) kein Kandidat für ein großes Turnier",
+            "status": "danger",
+            "choosen": true
+          }
+        ],
+        "maxChoices": 5
+      },
+      {
+        "name": "Sturm",
+        "counterText": " Spieler aus",
+        "content": [
+          {
+            "id": "0300",
+            "name": "Timo Werner",
+            "sub": "RB Leipzig",
+            "img": "46_werner.jpg",
+            "desc": "Löws Stürmer Nummer eins",
+            "status": "success",
+            "choosen": true
+          },
+          {
+            "id": "0301",
+            "name": "Mario Gomez",
+            "sub": "VfB Stuttgart",
+            "img": "47_gomez.jpg",
+            "desc":
+              "Gomez bringt viel Erfahrung mit, ist der perfekte Ersatz für Werner",
+            "status": "warning",
+            "choosen": true
+          },
+          {
+            "id": "0303",
+            "name": "Sandro Wagner",
+            "sub": "FC Bayern",
+            "img": "49_wagner.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0304",
+            "name": "Max Kruse",
+            "sub": "Werder Bremen",
+            "img": "50_kruse.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0305",
+            "name": "Nils Petersen",
+            "sub": "SC Freiburg",
+            "img": "51_petersen.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0306",
+            "name": "Kevin Volland",
+            "sub": "Bayer Leverkusen",
+            "img": "52_volland.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          },
+          {
+            "id": "0307",
+            "name": "Serge Gnabry",
+            "sub": "TSG Hoffenheim",
+            "img": "53_gnabry.jpg",
+            "desc": "Fährt nicht mit",
+            "status": "removed",
+            "choosen": false
+          }
+        ],
+        "maxChoices": 1
+      }
+    ]
+  }
+}

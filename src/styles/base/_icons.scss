@@ -1,0 +1,61 @@
+.icon {
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  text-align: center;
+
+  &__close {
+    fill:#FFFFFF;
+    stroke:#FFFFFF;
+    stroke-width:0.4;
+    cursor: pointer;
+  }
+
+  &__tap {
+    width: 30px;
+	  height: 47px;
+	  transform: rotate(-30deg);
+    fill: #FFFFFF;
+  }
+
+  &__welt {
+    height: 22px;
+    width: 75px;
+  }
+
+  &__log-in {
+    height: 19px;
+    width: 18px;
+  }
+
+  &__facebook {
+    height: 20px;
+    width: 10px;
+  }
+
+  &__twitter {
+    height: 16px;
+    width: 18px;
+  }
+
+  &__mail {
+    height: 18px;
+    width: 19px;
+  }
+
+  &__whatsapp {
+    height: 18px;
+    width: 18px;
+  }
+
+  &__arrow-down {
+        cursor: pointer;
+        #arrow-stroke {
+          transition: fill 0.2s ease-out;
+        }
+
+        &:hover #arrow-stroke {
+            fill: #f18825;
+        }
+  }
+}

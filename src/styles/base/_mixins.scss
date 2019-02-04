@@ -1,0 +1,12 @@
+/*
+ * font - family mixin:
+ */
+ @mixin MarkOt {
+     font-family: 'Mark OT', sans-serif;
+ }
+
+ @mixin FreighText {
+   font-family: "FreightText Pro", serif;
+   font-weight: 500;
+   font-style: italic;
+ }

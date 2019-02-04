@@ -1,0 +1,254 @@
+/* show Dropdown tooltip: */
+@keyframes showDropdownTooltip {
+  0% {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -30%);
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 0px);
+  }
+  10% {
+    opacity: 0.96;
+    visibility: visible;
+    transform: translate(-50%, -120px);
+  }
+  85% {
+    opacity: 0.96;
+    visibility: visible;
+    transform: translate(-50%, -120px);
+  }
+  90% {
+    opacity: 0;
+    visibility: visible;
+    transform: translate(-50%, 30px);
+  }
+  99% {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -100vh);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -30%);
+  }
+}
+
+/* wiggle effect on items: */
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* fade el in and up: */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* fade el out and back to normal: */
+@keyframes fadeOutAndBack {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  5% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  90% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* fadeInOut */
+@keyframes fadeInOut {
+  0% {
+    transform: translateX(-50%) scale(1);
+    display: none;
+    visibility: visible;
+    opacity: 0;
+  }
+  5% {
+    transform: translateX(-50%) scale(1);
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1);
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-50%) scale(1);
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    display: none;
+    visibility: visible;
+    opacity: 0;
+  }
+}
+
+/* fade out to display none: */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    display: none;
+    transform: scale(0);
+  }
+}
+
+/* text color blinking: */
+@keyframes blinking-text {
+  0% {
+  }
+  50% {
+    color: #f18825;
+    font-size: 14px;
+  }
+  100% {
+  }
+}
+
+/* blinking animation on change event:  */
+@keyframes pulse {
+  0% {
+    background-color: $weltorange;
+    box-shadow: 0 0 0px rgb(241, 136, 37);
+  }
+  20% {
+    background-color: lighten($weltorange, 10%);
+    box-shadow: 0 0 20px rgb(241, 136, 37);
+  }
+  40% {
+    background-color: $weltorange;
+    box-shadow: 0 0 0px rgb(241, 136, 37);
+  }
+  100% {
+    background-color: $weltorange;
+    box-shadow: 0 0 0px rgb(241, 136, 37);
+  }
+}
+
+/* blinking animation on change event:  */
+@keyframes pulseFinal {
+  0% {
+    background-color: $success;
+    box-shadow: 0 0 0px $success;
+  }
+  20% {
+    background-color: lighten($success, 10%);
+    box-shadow: 0 0 20px $success;
+  }
+  40% {
+    background-color: $success;
+    box-shadow: 0 0 0px $success;
+  }
+  100% {
+    background-color: $success;
+    box-shadow: 0 0 0px $success;
+  }
+}
+
+/* shrink out navigation bar: */
+@keyframes shrinkAnimation {
+  0% {
+    transform: translateY(0%) scale(1);
+  }
+  20% {
+    transform: translateY(-60%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-60%) scale(1);
+    margin: 40px 8vw 0;
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-60%) scale(1);
+    margin: 40px 8vw 0;
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-60%) scale(1);
+    margin: 40px 0vw 0;
+    opacity: 0.6;
+  }
+  99% {
+    transform: translateY(-60%) scale(0);
+    margin: 40px 0vw 0;
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-60%) scale(0.6);
+    margin: 40px 0vw 0;
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* spinner animation: */
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
