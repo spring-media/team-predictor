@@ -4,6 +4,7 @@
       <span v-else key="footer" class="sharing-bar__title sharing-bar__title--footer">Aufstellung mit Freunden teilen</span>
       <div class="sharing-bar__wrapper">
         <div class="sharing-bar__icon-wrap">
+            <!-- @TODO: sharing links austauschen gegen die richtigen -->
             <sharing-button-facebook :class="{disabled: currentPlattform !== '' && currentPlattform !== 'facebook' && sharingPopUpOpen}" @click.native="handleClick('facebook')"></sharing-button-facebook>
             <span class="vertical-divider"></span>
             <sharing-button-twitter :class="{disabled: currentPlattform !== '' && currentPlattform !== 'twitter' && sharingPopUpOpen}" @click.native="handleClick('twitter')"></sharing-button-twitter>
@@ -17,6 +18,7 @@
 
 <script>
 import { scrollTo } from '@/utils/scrolling';
+import { trackEvent } from '@/tracking';
 
 import SharingButton_Facebook from './Icons/SharingButton_Facebook';
 import SharingButton_Mail from './Icons/SharingButton_Mail';
@@ -58,13 +60,12 @@ export default {
 
       const popUp = document.getElementById('ia-wm-kader-sharing-popup');
       const sharingBar = this.$refs.sharingBar;
-
       if (!this.isHeader) {
         const offsetSharingBar = sharingBar.offsetHeight + sharingBar.offsetTop;
         scrollTo(popUp.offsetTop - offsetSharingBar, '', 800);
       }
-
       popUp.classList.add('active');
+      trackEvent('wm-kader', 'click', 'sharing', 'popup-open');
     }
   }
 };

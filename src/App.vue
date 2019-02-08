@@ -19,7 +19,7 @@ import TheIntroContent from '@/components/Intro/TheIntroContent';
 import TheMainContent from '@/components/Main/TheMainContent';
 import TheNavigationFooter from '@/components/Navigation/NavigationFooter/TheNavigationFooter';
 import TheFooter from '@/components/Navigation/TheFooter';
-
+import { trackEvent } from '@/tracking';
 export default {
   name: 'App',
   components: {

@@ -44,7 +44,7 @@
         </a>
       </li>
       <li class="side__item side__item--top">
-        <a href="https://twitter.com/share?url=https://www.welt.de/sport/interaktiv/weltmeisterschaft-2018/aufstellung-erstellen.html&text=Was%20w%C3%A4re%20deine%20Aufstellung%20f%C3%BCr%20das%20n%C3%A4chste%20Spiel%3F%20Stelle%20jetzt%20deine%20eigene%20Wunsch-Elf%20zusammen%20und%20erfahre%2C%20welche%20Chancen%20sie%20hat.%20%23WM2018%20" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/share?url=https://www.welt.de/sport/interaktiv/weltmeisterschaft-2018/aufstellung-erstellen.html&text=Das%20ist%20meine%20Aufstellung%20f%C3%BCr%20das%20Spiel%20gegen%20Schweden.%20Stelle%20jetzt%20deine%20eigene%20Wunsch-Elf%20zusammen%20und%20erfahre%2C%20welche%20Chancen%20sie%20hat.%20%23WM2018%20%23GERSWE" target="_blank" rel="noopener noreferrer">
           <svg class="icon icon__twitter" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 18 15" xmlSpace="preserve">
             <g id="Symbols">
               <g id="HEADER-STICKY_variante_neu" transform="translate(-1205.000000, -13.000000)">
@@ -59,7 +59,7 @@
                   </a>
       </li>
       <li class="side__item">
-        <a href="mailto:?subject=Empfohlener%20Artikel%20von%20welt.de&body=Hallo%2C%0A%0Adas%20hier%20ist%20interessant%20%E2%80%93%20kommt%20von%20welt.de%3A%0A%0A%0AWas%20w%C3%A4re%20deine%20Aufstellung%20f%C3%BCr%20das%20n%C3%A4chste%20Spiel%3F%20Stelle%20jetzt%20deine%20eigene%20Wunsch-Elf%20zusammen%20und%20erfahre%2C%20welche%20Chancen%20sie%20hat.%20%23WM2018%20%0A%0Ahttps%3A%2F%2Fwww.welt.de%2Fsport%2Finteraktiv%2Fweltmeisterschaft-2018%2Faufstellung-erstellen.html%0A%0A%0ACheck%20die%20Welt%3A%20Aktuelle%20Nachrichten%2C%20Hintergr%C3%BCnde%2C%20Analysen%20%E2%80%93%20jetzt%20auf%20https%3A%2F%2Fwww.welt.de%2F" alt="email" rel="noopener noreferrer">
+        <a href="mailto:?subject=Empfohlener%20Artikel%20von%20welt.de&body=Hallo%2C%0A%0Adas%20hier%20ist%20interessant%20%E2%80%93%20kommt%20von%20welt.de%3A%0A%0A%0ADas%20ist%20meine%20Aufstellung%20f%C3%BCr%20das%20Spiel%20gegen%20Schweden.%20Stelle%20jetzt%20deine%20eigene%20Wunsch-Elf%20zusammen%20und%20erfahre%2C%20welche%20Chancen%20sie%20hat.%20%23WM2018%20%23GERSWE%0A%0Ahttps%3A%2F%2Fwww.welt.de%2Fsport%2Finteraktiv%2Fweltmeisterschaft-2018%2Faufstellung-erstellen.html%0A%0A%0ACheck%20die%20Welt%3A%20Aktuelle%20Nachrichten%2C%20Hintergr%C3%BCnde%2C%20Analysen%20%E2%80%93%20jetzt%20auf%20https%3A%2F%2Fwww.welt.de%2F" alt="email" rel="noopener noreferrer">
           <svg class="icon icon__mail" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 16" xmlSpace="preserve">
             <g id="Symbols">
               <g id="HEADER-STICKY_variante_neu" transform="translate(-1242.000000, -12.000000)">
@@ -76,7 +76,7 @@
         </a>
       </li>
       <li class="side__item">
-        <a href="whatsapp%3A%2F%2Fsend%3Ftext%3DWas%20w%C3%A4re%20deine%20Aufstellung%20f%C3%BCr%20das%20n%C3%A4chste%20Spiel%3F%20Stelle%20jetzt%20deine%20eigene%20Wunsch-Elf%20zusammen%20und%20erfahre%2C%20welche%20Chancen%20sie%20hat.%20%23WM2018%20%0A%0Ahttps%3A%2F%2Fwww.welt.de%2Fsport%2Finteraktiv%2Fweltmeisterschaft-2018%2Faufstellung-erstellen.html" alt="mobile" rel="noopener noreferrer">
+        <a href="whatsapp%3A%2F%2Fsend%3Ftext%3DDas%20ist%20meine%20Aufstellung%20f%C3%BCr%20das%20Spiel%20gegen%20Schweden.%20Stelle%20jetzt%20deine%20eigene%20Wunsch-Elf%20zusammen%20und%20erfahre%2C%20welche%20Chancen%20sie%20hat.%20%23WM2018%20%23GERSWE%0A%0Ahttps%3A%2F%2Fwww.welt.de%2Fsport%2Finteraktiv%2Fweltmeisterschaft-2018%2Faufstellung-erstellen.html" alt="mobile" rel="noopener noreferrer">
           <svg class="icon icon__whatsapp" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M14.582 11.985c-.25-.124-1.473-.723-1.7-.806-.229-.082-.395-.124-.56.124-.166.248-.643.806-.788.971-.145.165-.29.186-.54.062-.248-.124-1.05-.385-2-1.229-.74-.657-1.24-1.467-1.385-1.715-.145-.248-.015-.382.11-.506.111-.11.248-.289.373-.434.124-.144.166-.247.249-.413.082-.165.041-.31-.021-.433-.062-.124-.56-1.343-.767-1.84-.202-.482-.407-.417-.56-.424a10.028
             10.028 0 0 0-.477-.009.916.916 0 0 0-.664.31c-.228.248-.87.847-.87

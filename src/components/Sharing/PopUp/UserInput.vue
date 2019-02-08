@@ -25,7 +25,8 @@
 <script>
 import axios from 'axios';
 /*  Vue guide for name checking: https://vuejs.org/v2/guide/computed.html */
-const blackListUrl = '';
+const blackListUrl =
+  'https://static.apps.welt.de/sport/interaktiv/weltmeisterschaft-2018/assets/data/blacklist.json';
 let blacklist;
 
 /* check if input is a number: */
@@ -115,18 +116,17 @@ export default {
       } else return false;
     },
     checkUserName(input) {
-      return true;
-      // if (!checkIfBlacklisted(input)) {
-      //   return true;
-      // } else return false;
+      if (!checkIfBlacklisted(input)) {
+        return true;
+      } else return false;
     }
   },
   created() {
     /* get blacklist for user input check:*/
-    // axios.get(blackListUrl).then(response => {
-    //   const list = response.data.keywords;
-    //   blacklist = list.split(', ');
-    // });
+    axios.get(blackListUrl).then(response => {
+      const list = response.data.keywords;
+      blacklist = list.split(', ');
+    });
   }
 };
 </script>

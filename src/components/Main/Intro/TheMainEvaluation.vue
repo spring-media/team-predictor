@@ -153,7 +153,6 @@ export default {
     sendSharingCandidate(candidats) {
       const sections = this.sectionContent;
       let candidateName = '';
-    
       // Mittelfeld first --> Sturm --> and last Tor for Sharing Name Preference:
       for (let i = 2; i < sections.length; i++) {
         if (i === 0) {

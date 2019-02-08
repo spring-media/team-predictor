@@ -1,0 +1,8 @@
+{
+  "apiKey": "",
+  "authDomain": "wm-kader.firebaseapp.com",
+  "databaseURL": "https://wm-kader.firebaseio.com",
+  "projectId": "wm-kader",
+  "storageBucket": "wm-kader.appspot.com",
+  "messagingSenderId": "433867227552"
+}

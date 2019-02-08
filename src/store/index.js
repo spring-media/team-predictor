@@ -2,6 +2,13 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 
+import { trackEvent } from '@/tracking';
+import {
+  database,
+  initDatabase,
+  getNumberOfSharedPages,
+  updateNumberOfVotings
+} from './firebase';
 import {
   setSectionStateObject,
   setEditorVotes,
@@ -15,12 +22,15 @@ import {
   openShareURL
 } from './store-utils';
 
-/* app config file:*/
-const configUrl =
-  'https://static.apps.welt.de/sport/interaktiv/weltmeisterschaft-2018/assets/data/kor-ger-25060930.json';
+const configData = require('../data/configData.json');
+
+console.log(">>>", configData)
 
 /* init the Vuex Store: */
 Vue.use(Vuex);
+
+/* holds a local copy of the database snapshot: */
+let dtbRecord;
 
 /* initial State for Vuex Store (if reset) */
 const initialState = () => ({
@@ -41,6 +51,8 @@ const initialState = () => ({
   toolTipID: '',
   sharingName: '',
   appVersion: 2,
+  // editorVotes: setEditorVotes(configData.settings.editorsChoices),
+  // editorName: configData.mainSection.editorTitle,
   configData: {}
 });
 
@@ -98,6 +110,11 @@ export default new Vuex.Store({
 
     /* current software version used by the user (e.g. old shared site with version 1) : */
     appVersion: 2,
+    // /* holds the choices made by the Editors: */
+    // editorVotes: setEditorVotes(configData.settings.editorsChoices),
+    //
+    // /* the name of the editors to display: */
+    // editorName: configData.mainSection.editorTitle,
 
     /* holds the most votet items from the database: */
     majorityVotes: {},
@@ -196,10 +213,16 @@ export default new Vuex.Store({
         if (currentSection.currentCount === currentSection.maxChoices) {
           currentSection.isComplete = true;
           state.complete[index] = true;
-
+          trackEvent(
+            'wm-kader',
+            'click',
+            'section-complete',
+            currentSection.name
+          );
           /* check if all selections are made: */
           if (state.complete.every(checkCompleteArray)) {
             this.state.finished = true;
+            trackEvent('wm-kader', 'click', 'selection-complete');
           }
         } else {
           currentSection.isComplete = false;
@@ -230,8 +253,12 @@ export default new Vuex.Store({
       const url = window.location.href
         .split('?')[0]
         .replace('https://welt.de', ''); // clean up URL in case of shared link: https://static.apps.welt.de
-
       window.history.replaceState({}, document.title, url);
+      //
+      // Object.assign(state, initialState()); // reinit stores state (without majorvotes,..
+      //
+      // window.scroll({ top: 0, left: 0 });
+      // state.userRetry += 1; // increment user tries
       window.location.reload();
     },
     setMajorityVotes(state, payload) {
@@ -277,51 +304,45 @@ export default new Vuex.Store({
   },
   actions: {
     loadConfig({ commit, state, dispatch }, payload) {
-      axios
-        .get(configUrl)
-        .then(response => {
-          commit('initConfigData', response.data);
-        })
-        .then(() => {
-          commit('initSections');
-          commit('initCompleteArray');
-        })
-        .then(() => {
-          /*
-           * look up if page is a Shared Result and let it know the store:
-           */
-          const currentPath = window.location.search;
-          let sharedView = false;
+      commit('initConfigData', configData);
+      commit('initSections');
+      commit('initCompleteArray');
 
-          if (currentPath.length > 0) {
-            /* split back to array: */
-            const params = currentPath.split('&');
+      const currentPath = window.location.search;
+      let sharedView = false;
 
-            /* check if the 2 params are present in query string: ('?' counts as one param) */
-            if (params.length >= 3) {
-              const name = atob(params[1].split('=')[1]);
-              const choices = atob(params[2].split('=')[1]).split(',');
+      if (currentPath.length > 0) {
+        /* split back to array: */
+        const params = currentPath.split('&');
 
-              // // check version --> if no information is present in url, it's version 1:
-              const version =
-                params.length > 3
-                  ? atob(params[3].split('=')[1]).split(',')
-                  : '1';
+        /* check if the 2 params are present in query string: ('?' counts as one param) */
+        if (params.length >= 3) {
+          const name = atob(params[1].split('=')[1]);
+          const choices = atob(params[2].split('=')[1]).split(',');
 
-              commit('initAppVersion', parseInt(version[0], 10));
+          // // check version --> if no information is present in url, it's version 1:
+          const version =
+            params.length > 3
+              ? atob(params[3].split('=')[1]).split(',')
+              : '1';
 
-              /* check if name && and choices exist and if the query is not broken: */
-              if (name.length >= 2) {
-                sharedView = true;
-                dispatch({
-                  type: 'triggerShareScreen',
-                  userName: name,
-                  userChoices: choices
-                });
-              }
-            }
+          commit('initAppVersion', parseInt(version[0], 10));
+
+          /* check if name && and choices exist and if the query is not broken: */
+          if (name.length >= 2) {
+            sharedView = true;
+            dispatch({
+              type: 'triggerShareScreen',
+              userName: name,
+              userChoices: choices
+            });
           }
-        });
+        }
+      }
+
+      window.setTimeout(function() {
+        trackEvent('wm-kader', 'view', sharedView ? 'shared' : '');
+      }, 1000);
     },
     /* manage lineup by modifying the max choices of the sections: */
     triggerDropDownSelect({ commit, state }, payload) {
@@ -348,6 +369,10 @@ export default new Vuex.Store({
       new Promise((resolve, reject) => {
         commit('selection', payload);
         resolve();
+      }).then(() => {
+        if (state.finished) {
+          dispatch({ type: 'getMajorityVotes', updateVotes: true });
+        }
       });
     },
     /* manage sharing destination */
@@ -414,7 +439,75 @@ export default new Vuex.Store({
       })
         .then(() => {
           commit('setSharingScreen');
-        });
+        })
+        .then(dispatch({ type: 'getMajorityVotes', updateVotes: false }));
     },
+    /* gets the most votet selections from the database: */
+    getMajorityVotes({ commit, state, dispatch }, payload) {
+      database.ref().once('value', snapshot => {
+        if (snapshot.exists()) {
+          dtbRecord = snapshot.val();
+
+          const votes = dtbRecord.selections;
+          let majVotes = {};
+          const sections = state.configData.mainSection.sections;
+          const voteSum = dtbRecord.voteCounter;
+
+          sections.forEach(section => {
+            const max = section.maxChoices;
+            const content = Object.keys(votes[section.name]).sort(function(
+              a,
+              b
+            ) {
+              return votes[section.name][b] - votes[section.name][a];
+            });
+
+            for (let i = 0; i < max; i++) {
+              const voteCount = votes[section.name][content[i]]; // get the corresponding vote counter of the database - Record
+              const percentage = voteSum > 0 ? voteCount / voteSum * 100 : 0;
+              majVotes[content[i]] = percentage;
+            }
+          });
+
+          new Promise((resolve, reject) => {
+            commit('setMajorityVotes', majVotes);
+            resolve();
+          }).then(() => {
+            if (payload.updateVotes) {
+              // update database with new selections:
+              dispatch({ type: 'updateMajorityVotes' });
+              updateNumberOfVotings(dtbRecord.voteCounter);
+            }
+          });
+        } else {
+          initDatabase(state.configData);
+        }
+      });
+    },
+    /* updates the database with the new user Selections: */
+    updateMajorityVotes({ state }) {
+      const content = getResultContent(state.sections, state.userChoices);
+
+      let updates = {};
+
+      content.forEach(section => {
+        const sectionName = section.name;
+        const sectionContent = section.content;
+
+        sectionContent.forEach(item => {
+          const id = item.id.toString();
+          const currentValue = dtbRecord.selections[sectionName][id];
+
+          if (currentValue == null) {
+            const newVal = 1; // if value isn't present (i.e. added later), then it has one selection now,
+            updates['/selections/' + sectionName + '/' + id] = newVal;
+          } else {
+            const newVal = currentValue + 1;
+            updates['/selections/' + sectionName + '/' + id] = newVal;
+          }
+        });
+      });
+      database.ref().update(updates);
+    }
   }
 });

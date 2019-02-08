@@ -5,6 +5,9 @@
   "settings": {
     "projectPath":
       "https://static.apps.welt.de/sport/interaktiv/weltmeisterschaft-2018",
+    "uploadKey": "2018/test/ia/ia-wm-kader/sharingPages/",
+    "uploadPath":
+      "https://static.apps.welt.de/2018/test/ia/ia-wm-kader/sharingPages/",
     "fileName": "wm-kader",
     "images": "/assets/images/",
     "icons": "/assets/icons/",

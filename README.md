@@ -1,6 +1,6 @@
 # Team Predictor
 
-> Lets your predict football team and compare with others.
+> Lets users predict their football team and compare with others
 
 **Demo**: [weltmeisterschaft-2018 @WELT](https://www.welt.de/sport/interaktiv/weltmeisterschaft-2018/wm-kader.html)
 
@@ -8,24 +8,30 @@
 
 ```bash
 # Install dependencies
-npm install
+yarn
 
 # Serve at localhost:8080
-npm run dev
+yarn dev
 ```
 
 ### Customization
 
-To configure a team, update [configData.json](src/data/configData.json) file as per your requirements. This is initialized within vuex store and serves through components in application.
+#### Players Configuration
+
+To configure a team, update [configData.json](src/data/configData.json) file as per your requirements. This initializes vuex store and pipe data to components within application scope.
+
+#### Firebase Configuration
+
+The firebase request to get List of World Leaders button can be configured at [configFirebase.json](src/data/configFirebase.json)
 
 ### Build
 
 ```bash
 # Build for production with minification
-npm run build
+yarn build
 
 # ~Build for production and view the bundle analyzer report
-npm run build --report
+yarn build --report
 ```
 
 ## License

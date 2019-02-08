@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import { trackEvent } from '@/tracking';
+
 import UserInput from './UserInput';
 
 export default {
@@ -37,8 +39,7 @@ export default {
   data: () => ({
     userName: {
       correct: false,
-      content: '',
-      submitted: false,
+      content: ''
     },
     userAdress: {
       correct: false,
@@ -65,6 +66,8 @@ export default {
     /* token is authentification object send from invisible recaptcha: */
     handleSubmit() {
       if (this.userName.correct) {
+        trackEvent('wm-kader', 'click', 'sharing', 'submitted');
+
         this.$store.dispatch({
           type: 'chooseUserName',
           name: this.userName.content
