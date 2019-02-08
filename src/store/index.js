@@ -24,8 +24,6 @@ import {
 
 const configData = require('../data/configData.json');
 
-console.log(">>>", configData)
-
 /* init the Vuex Store: */
 Vue.use(Vuex);
 
